@@ -1,0 +1,14 @@
+---
+boxes:
+- name: clock
+  cmd: date
+  icon: ":)"
+  interval: 1
+- name: ver
+  cmd: uname -a
+  icon: ":("
+  interval: -1
+delimeter: " | "
+format: "%{l}%{T2}%{O6}{{ver}}%{O} %{c}%{T-}{{clock}}"
+# Interval to refresh output
+refresh: 1
