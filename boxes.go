@@ -72,7 +72,6 @@ func main() {
 		// If interval is negative only run cmd once
 		if cfg.Boxes[i].Interval < 0 {
 			go runCmd(strings.Fields(cfg.Boxes[i].Cmd), i, &buf)
-			fmt.Println("run once")
 		} else {
 			go func(cmd []string, ref int, idx int, buf *Buffer) {
 				for {
